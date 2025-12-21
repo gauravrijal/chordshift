@@ -68,6 +68,25 @@ npm run build
 npm start
 ```
 
+## 🌐 Deployment
+
+### Option 1: Vercel (Recommended)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+1. Push your code to your GitHub repository (already done!).
+2. Go to **[Vercel](https://vercel.com)** and sign up/login.
+3. Click **"Add New..."** -> **"Project"**.
+4. Import your `chordshift` repository.
+5. Click **"Deploy"**.
+
+Vercel will detect Next.js automatically and launch your site in under a minute.
+
+### Option 2: GitHub Pages
+To deploy to GitHub Pages, you need to configure static export:
+1. Open `next.config.ts` and add `output: 'export'`.
+2. Run `npm run build`.
+3. Upload the `out/` folder or configure a GitHub Action.
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
