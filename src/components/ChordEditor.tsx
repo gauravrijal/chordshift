@@ -13,7 +13,7 @@ export function ChordEditor({ value, onChange, className }: ChordEditorProps) {
     return (
         <div className={cn("flex flex-col h-full bg-white", className)}>
             {/* Fixed Header */}
-            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-slate-100 bg-slate-50/80">
+            <div className="flex-none flex items-center justify-between px-4 sm:px-6 lg:px-10 py-5 border-b border-slate-100 bg-slate-50/80">
                 <div className="flex items-center gap-3">
                     <div className="h-3 w-3 rounded-full bg-slate-400 ring-4 ring-slate-100" />
                     <label className="text-base font-bold text-slate-700 tracking-tight">Original Song</label>

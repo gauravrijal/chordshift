@@ -135,7 +135,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
     return (
         <div className={cn("flex flex-col h-full bg-white", className)}>
             {/* Fixed Header */}
-            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-slate-100 bg-slate-50/80">
+            <div className="flex-none flex items-center justify-between px-4 sm:px-6 lg:px-10 py-5 border-b border-slate-100 bg-slate-50/80">
                 <div className="flex items-center gap-3">
                     <div className="h-3 w-3 rounded-full bg-[#90AB8B] shadow-[0_0_12px_rgba(144,171,139,0.8)] ring-4 ring-white" />
                     <label className="text-base font-bold text-slate-800 tracking-tight">Transposed View</label>
@@ -168,7 +168,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
                         className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500"
                         title="Download as TXT"
                     >
-                        <FileText size={14} /> <span>Txt</span>
+                        <FileText size={14} /> <span className="hidden sm:inline">Txt</span>
                     </button>
 
                     <button
@@ -176,7 +176,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
                         className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-red-50 border border-red-100 shadow-sm hover:shadow-md hover:border-red-300 hover:text-red-700 transition-all text-red-600"
                         title="Download as PDF"
                     >
-                        <FileText size={14} /> <span>PDF</span>
+                        <FileText size={14} /> <span className="hidden sm:inline">PDF</span>
                     </button>
                 </div>
             </div>
