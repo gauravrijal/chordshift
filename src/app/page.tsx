@@ -58,16 +58,16 @@ export default function Home() {
       <div className="fixed -bottom-40 left-20 w-96 h-96 bg-[#90AB8B] rounded-full blur-3xl opacity-20 animate-blob animation-delay-4000 -z-10 mix-blend-multiply" />
 
       {/* Header - Fixed height */}
-      <header className="flex-none flex items-center justify-between px-2 mb-4 relative z-20">
+      <header className="flex-none flex items-center justify-between px-2 mb-4 relative z-20 gap-2 sm:gap-4">
         <div className="flex items-center gap-4 select-none">
           {/* Logo Image */}
-          <div className="h-16 w-16 lg:h-20 lg:w-20 flex items-center justify-center rounded-full bg-[#90AB8B] shadow-xl shadow-[#90AB8B]/20 ring-4 ring-white/50 border-2 border-[#90AB8B]/50 overflow-hidden">
+          <div className="h-16 w-16 lg:h-20 lg:w-20 flex items-center justify-center rounded-full bg-[#90AB8B] shadow-xl shadow-[#90AB8B]/20 ring-4 ring-white/50 border-2 border-[#90AB8B]/50 overflow-hidden flex-none">
             <img src="/logo.png" alt="ChordShift Logo" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-slate-800 hidden md:block">ChordShift</h1>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           {/* Autoscroll Controls */}
           <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-2 py-1.5 rounded-full border border-slate-200/60 shadow-lg shadow-slate-200/50">
 
