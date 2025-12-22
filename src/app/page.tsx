@@ -81,7 +81,7 @@ export default function Home() {
 
   return (
     // Layout: h-screen + overflow-hidden to lock the page
-    <div className="flex flex-col h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-[#90AB8B]/10 via-[#90AB8B]/40 to-[#90AB8B]/10 dark:bg-neutral-950 animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 overflow-hidden transition-colors duration-500">
+    <div className="flex flex-col h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-emerald-50 via-[#90AB8B]/20 to-teal-50 dark:bg-neutral-950 animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 overflow-hidden transition-colors duration-500">
 
       {/* Animated Blobs (Hidden in Dark Mode for cleaner look, or adjusted) */}
       <div className="fixed -top-40 -left-40 w-96 h-96 bg-[#90AB8B] rounded-full blur-3xl opacity-20 dark:opacity-5 animate-blob -z-10 mix-blend-multiply dark:mix-blend-normal" />
@@ -142,7 +142,7 @@ export default function Home() {
           {/* Import Button */}
           <button
             onClick={() => setShowOCR(true)}
-            className="group flex items-center gap-3 px-6 py-3 rounded-full bg-white dark:bg-neutral-900 border border-slate-200/60 dark:border-white/10 shadow-lg shadow-slate-200/50 dark:shadow-black/50 hover:shadow-xl hover:scale-105 hover:border-sky-200 hover:text-sky-700 dark:hover:text-sky-400 transition-all text-sm font-bold text-slate-600 dark:text-slate-300"
+            className="group flex items-center gap-3 px-6 py-3 rounded-full bg-white dark:bg-neutral-900 border border-slate-200/60 dark:border-white/10 shadow-lg shadow-slate-200/50 dark:shadow-black/50 hover:shadow-xl hover:scale-105 hover:border-[#90AB8B] hover:text-[#90AB8B] dark:hover:text-[#90AB8B] transition-all text-sm font-bold text-slate-600 dark:text-slate-300"
           >
             <FileUp size={18} />
             <span className="hidden sm:inline">Import File</span>
