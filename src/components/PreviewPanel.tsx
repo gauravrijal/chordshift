@@ -135,7 +135,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
     return (
         <div className={cn("flex flex-col h-full bg-white", className)}>
             {/* Fixed Header */}
-            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-emerald-100 bg-emerald-50/30">
+            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-slate-100 bg-slate-50/80">
                 <div className="flex items-center gap-3">
                     <div className="h-3 w-3 rounded-full bg-[#90AB8B] shadow-[0_0_12px_rgba(144,171,139,0.8)] ring-4 ring-white" />
                     <label className="text-base font-bold text-slate-800 tracking-tight">Transposed View</label>
