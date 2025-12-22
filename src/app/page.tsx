@@ -81,7 +81,7 @@ export default function Home() {
 
   return (
     // Layout: h-screen + overflow-hidden to lock the page
-    <div className="flex flex-col h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-emerald-50 via-[#90AB8B]/20 to-teal-50 dark:bg-neutral-950 animate-gradient-xy relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 overflow-hidden transition-colors duration-500">
+    <div className="flex flex-col h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-green-100 via-emerald-200 to-teal-100 dark:bg-neutral-950 animate-gradient-xy relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 overflow-hidden transition-colors duration-500">
 
       {/* Animated Blobs (Hidden in Dark Mode for cleaner look, or adjusted) */}
       <div className="fixed -top-40 -left-40 w-96 h-96 bg-[#90AB8B] rounded-full blur-3xl opacity-20 dark:opacity-5 animate-blob -z-10 mix-blend-multiply dark:mix-blend-normal" />
