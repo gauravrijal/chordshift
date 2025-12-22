@@ -36,7 +36,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
                         const isChord = isBracketChord || (isInlineChord && token.length < 6 && token.length > 0);
 
                         return (
-                            <span key={tIdx} className={isChord ? "text-[#90AB8B] font-bold" : "text-slate-600 dark:text-slate-300"}>
+                            <span key={tIdx} className={isChord ? "text-[#90AB8B] font-bold" : "text-slate-800"}>
                                 {token}
                             </span>
                         );
@@ -133,18 +133,18 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
     };
 
     return (
-        <div className={cn("flex flex-col h-full bg-white dark:bg-transparent", className)}>
+        <div className={cn("flex flex-col h-full bg-white", className)}>
             {/* Fixed Header */}
-            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-sky-100 dark:border-white/10 bg-sky-50/30 dark:bg-neutral-900/30">
+            <div className="flex-none flex items-center justify-between px-10 py-5 border-b border-emerald-100 bg-emerald-50/30">
                 <div className="flex items-center gap-3">
-                    <div className="h-3 w-3 rounded-full bg-[#90AB8B] shadow-[0_0_12px_rgba(144,171,139,0.8)] ring-4 ring-white dark:ring-neutral-800" />
-                    <label className="text-base font-bold text-slate-800 dark:text-slate-100 tracking-tight">Transposed View</label>
+                    <div className="h-3 w-3 rounded-full bg-[#90AB8B] shadow-[0_0_12px_rgba(144,171,139,0.8)] ring-4 ring-white" />
+                    <label className="text-base font-bold text-slate-800 tracking-tight">Transposed View</label>
                 </div>
 
                 <div className="flex gap-2">
                     <button
                         onClick={onToggleExpand}
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500 dark:text-slate-400 mr-2"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500 mr-2"
                         title={isExpanded ? "Collapse View" : "Expand View"}
                     >
                         {isExpanded ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
@@ -153,7 +153,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
 
                     <button
                         onClick={handleCopy}
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500 dark:text-slate-400"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500"
                         title="Copy to Clipboard"
                     >
                         {copied ? <CheckCircle2 size={14} className="text-emerald-500" /> : <Copy size={14} />}
@@ -161,11 +161,11 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
                     </button>
 
                     {/* Divider */}
-                    <div className="w-px bg-slate-200 dark:bg-slate-700 mx-1 h-6 self-center" />
+                    <div className="w-px bg-slate-200 mx-1 h-6 self-center" />
 
                     <button
                         onClick={handleDownloadTxt}
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500 dark:text-slate-400"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-slate-500"
                         title="Download as TXT"
                     >
                         <FileText size={14} /> <span>Txt</span>
@@ -173,7 +173,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
 
                     <button
                         onClick={handleDownloadPdf}
-                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/30 shadow-sm hover:shadow-md hover:border-red-300 dark:hover:border-red-800 hover:text-red-700 dark:hover:text-red-300 transition-all text-red-600 dark:text-red-400"
+                        className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-lg bg-red-50 border border-red-100 shadow-sm hover:shadow-md hover:border-red-300 hover:text-red-700 transition-all text-red-600"
                         title="Download as PDF"
                     >
                         <FileText size={14} /> <span>PDF</span>
@@ -184,9 +184,9 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
             {/* Scrollable Content */}
             <div
                 ref={scrollContainerRef}
-                className="flex-1 w-full bg-white/40 dark:bg-transparent p-10 overflow-auto"
+                className="flex-1 w-full bg-white p-10 overflow-auto"
             >
-                <div className="font-mono text-sm sm:text-base whitespace-pre leading-relaxed text-slate-600 dark:text-slate-300 pb-[50vh]">
+                <div className="font-mono text-sm sm:text-base whitespace-pre leading-relaxed text-slate-800 pb-[50vh]">
                     {content ? renderHighlighted : <span className="text-slate-400 italic">Transposed song will appear here...</span>}
                 </div>
             </div>
