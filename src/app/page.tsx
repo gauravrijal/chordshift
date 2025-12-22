@@ -49,8 +49,8 @@ export default function Home() {
   }, [content, semitones, preference]);
 
   return (
-    // Layout: h-screen + overflow-hidden to lock the page
-    <div className="flex flex-col h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-[#EBF4DD] via-[#90AB8B] to-[#5A7863] animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 overflow-hidden transition-colors duration-500">
+    // Layout: lg:h-screen locks desktop, mobile scrolls
+    <div className="flex flex-col min-h-screen lg:h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-[#EBF4DD] via-[#90AB8B] to-[#5A7863] animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 lg:overflow-hidden transition-colors duration-500">
 
       {/* Animated Blobs */}
       <div className="fixed -top-40 -left-40 w-96 h-96 bg-[#90AB8B] rounded-full blur-3xl opacity-20 animate-blob -z-10 mix-blend-multiply" />
@@ -61,10 +61,10 @@ export default function Home() {
       <header className="flex-none flex items-center justify-between px-2 mb-4 relative z-20">
         <div className="flex items-center gap-4 select-none">
           {/* Logo Image */}
-          <div className="h-20 w-20 flex items-center justify-center rounded-full bg-[#90AB8B] shadow-xl shadow-[#90AB8B]/20 ring-4 ring-white/50 border-2 border-[#90AB8B]/50 overflow-hidden">
+          <div className="h-16 w-16 lg:h-20 lg:w-20 flex items-center justify-center rounded-full bg-[#90AB8B] shadow-xl shadow-[#90AB8B]/20 ring-4 ring-white/50 border-2 border-[#90AB8B]/50 overflow-hidden">
             <img src="/logo.png" alt="ChordShift Logo" className="w-full h-full object-cover" />
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-800 hidden md:block">ChordShift</h1>
+          <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-slate-800 hidden md:block">ChordShift</h1>
         </div>
 
         <div className="flex items-center gap-4">
@@ -111,7 +111,7 @@ export default function Home() {
           {/* Import Button */}
           <button
             onClick={() => setShowOCR(true)}
-            className="group flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-slate-200/60 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:scale-105 hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-sm font-bold text-slate-600"
+            className="group flex items-center gap-3 px-4 lg:px-6 py-3 rounded-full bg-white border border-slate-200/60 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:scale-105 hover:border-[#90AB8B] hover:text-[#90AB8B] transition-all text-sm font-bold text-slate-600"
           >
             <FileUp size={18} />
             <span className="hidden sm:inline">Import File</span>
@@ -168,11 +168,11 @@ export default function Home() {
       }
 
       {/* Main Content */}
-      <main className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+      <main className="flex-1 lg:min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
 
         {/* Left: Input & Controls */}
         {!isExpanded && (
-          <section className="flex flex-col gap-6 h-full min-h-0">
+          <section className="flex flex-col gap-6 h-full lg:min-h-0 min-h-[600px]">
             <div className="flex-none">
               <TransposeControls
                 semitones={semitones}
@@ -182,15 +182,15 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex-1 min-h-0 bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden ring-1 ring-black/5 transition-transform hover:shadow-3xl duration-500">
+            <div className="flex-1 min-h-[300px] bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden ring-1 ring-black/5 transition-transform hover:shadow-3xl duration-500">
               <ChordEditor value={content} onChange={setContent} className="h-full bg-transparent" />
             </div>
           </section>
         )}
 
         {/* Right: Preview (Receives Scrolling Props) */}
-        <section className={`flex flex-col h-full min-h-0 ${isExpanded ? "lg:col-span-2" : ""}`}>
-          <div className="flex-1 min-h-0 bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden ring-1 ring-black/5 transition-transform hover:shadow-3xl duration-500">
+        <section className={`flex flex-col h-full lg:min-h-0 min-h-[600px] ${isExpanded ? "lg:col-span-2" : ""}`}>
+          <div className="flex-1 min-h-[300px] bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden ring-1 ring-black/5 transition-transform hover:shadow-3xl duration-500">
             <PreviewPanel
               content={processedContent}
               className="h-full bg-transparent"
