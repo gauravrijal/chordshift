@@ -168,7 +168,7 @@ export default function Home() {
       }
 
       {/* Main Content */}
-      <main className="flex-1 lg:min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+      <main className="flex-1 lg:min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch mb-6">
 
         {/* Left: Input & Controls */}
         {!isExpanded && (
