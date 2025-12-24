@@ -205,7 +205,7 @@ export default function Home() {
       </main>
 
       <footer className="flex-none py-4 text-center">
-        <p className="text-slate-400 text-xs font-semibold tracking-wide">Designed for Musicians • Simple & Accurate</p>
+        <p className="text-white/90 text-xs font-semibold tracking-wide drop-shadow-md">Designed for Musicians • Simple & Accurate</p>
       </footer>
     </div >
   );
