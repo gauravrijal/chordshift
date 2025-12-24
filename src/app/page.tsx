@@ -49,8 +49,8 @@ export default function Home() {
   }, [content, semitones, preference]);
 
   return (
-    // Layout: lg:h-screen locks desktop, mobile scrolls
-    <div className="flex flex-col min-h-screen lg:h-screen p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-[#EBF4DD] via-[#90AB8B] to-[#5A7863] animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 lg:overflow-hidden transition-colors duration-500">
+    // Layout: responsive vertical height with safety scroll
+    <div className="flex flex-col min-h-screen lg:h-screen lg:min-h-[850px] p-4 sm:p-6 lg:p-8 font-sans bg-gradient-to-br from-[#EBF4DD] via-[#90AB8B] to-[#5A7863] animate-gradient-x relative selection:bg-[#90AB8B]/30 selection:text-emerald-900 lg:overflow-y-auto transition-colors duration-500">
 
       {/* Animated Blobs */}
       <div className="fixed -top-40 -left-40 w-96 h-96 bg-[#90AB8B] rounded-full blur-3xl opacity-20 animate-blob -z-10 mix-blend-multiply" />
