@@ -16,9 +16,9 @@
     "pdfjs-dist": "^5.4.449",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "soundtouchjs": "^0.2.1",
     "tailwind-merge": "^3.4.0",
-    "tesseract.js": "^7.0.0",
-    "tone": "^15.1.22"
+    "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
