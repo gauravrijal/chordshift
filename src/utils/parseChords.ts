@@ -45,8 +45,7 @@ export function parseLine(line: string): { type: LineType; tokens: Token[] } {
     // We want to keep spaces to preserve layout
     const parts = line.split(/(\s+|\[.*?\]|\(.*?\)|\/)/g).filter(x => x);
 
-    let chordCount = 0;
-    let wordCount = 0;
+
 
     // Heuristic scan
     const tempTokens = parts.map(part => {
@@ -113,7 +112,6 @@ export function transposeDetails(text: string, semitones: number, preferSharps: 
     const lines = text.split('\n');
 
     // First pass: determine key context if auto
-    let allChords: string[] = [];
     // We could do a pre-pass to gather all chords to decide safe Auto.
     // For now, efficient line-by-line is okay, but "Auto" needs global context? 
     // Let's do a quick scan if 'auto'

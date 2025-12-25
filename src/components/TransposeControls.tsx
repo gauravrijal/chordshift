@@ -1,6 +1,6 @@
 "use strict";
 import React from 'react';
-import { Minus, Plus, RefreshCw, Hash, Music } from 'lucide-react';
+import { Minus, Plus, RefreshCw } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface TransposeControlsProps {

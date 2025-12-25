@@ -16,12 +16,11 @@ export function Navbar({ children }: NavbarProps) {
 
     const navLinks = [
         { href: '/', label: 'Chord Transpose' },
-        { href: '/pitch', label: 'Audio Pitch' },
     ];
 
     return (
         <header className="flex-none flex items-center justify-between px-2 mb-4 relative z-50 gap-2 sm:gap-4 select-none">
-            {/* Left: Logo & Title & Nav */}
+            {/* Left: Logo & Title */}
             <div className="flex items-center gap-4">
                 {/* Logo Image */}
                 <Link href="/" className="flex-none block">
@@ -30,25 +29,7 @@ export function Navbar({ children }: NavbarProps) {
                     </div>
                 </Link>
 
-                <div className="hidden md:flex flex-col gap-1">
-                    <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-slate-800 leading-none">ChordShift</h1>
-                    <nav className="flex gap-4 text-sm font-semibold">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={cn(
-                                    "px-2 py-0.5 rounded-full transition-colors",
-                                    pathname === link.href
-                                        ? "text-[#5A7863] bg-white/50"
-                                        : "text-slate-600 hover:text-slate-900"
-                                )}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </nav>
-                </div>
+                <h1 className="hidden md:block text-2xl lg:text-3xl font-extrabold tracking-tight text-slate-800 leading-none">ChordShift</h1>
             </div>
 
             {/* Right: Actions & Mobile Menu */}
@@ -56,8 +37,8 @@ export function Navbar({ children }: NavbarProps) {
                 {/* Page Specific Actions (Autoscroll etc) */}
                 {children}
 
-                {/* Mobile Menu Toggle */}
-                <div className="md:hidden relative">
+                {/* Mobile Menu Toggle (Always Visible) */}
+                <div className="relative">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="p-3 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-lg shadow-slate-200/50 text-slate-700 hover:text-[rgb(144,171,139)] transition-all active:scale-90 z-50 relative"
@@ -65,7 +46,7 @@ export function Navbar({ children }: NavbarProps) {
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
 
-                    {/* Mobile Dropdown */}
+                    {/* Dropdown Menu */}
                     {isMenuOpen && (
                         <>
                             <div

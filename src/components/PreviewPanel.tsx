@@ -17,7 +17,7 @@ export function PreviewPanel({ content, className, isScrolling, scrollSpeed, isE
     const [copied, setCopied] = useState(false);
 
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-    const animationFrameRef = useRef<number | null>(null);
+
     const lastTimeRef = useRef<number>(0);
     const scrollAccumulatorRef = useRef<number>(0);
 
